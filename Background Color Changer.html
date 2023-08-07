@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Color Changer</title>
+<style>
+  /* Default background color */
+  .default-bg {
+    background-color: #f0f0f0;
+  }
+
+  /* New background color */
+  .new-bg {
+    background-color: #3498db;
+  }
+
+  /* Styling for the button */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body class="default-bg">
+<button id="colorButton">Change Background Color</button>
+
+<script>
+  // Function to toggle the CSS class on the body element
+  function toggleBackgroundColor() {
+    const body = document.querySelector('body');
+    body.classList.toggle('new-bg');
+  }
+
+  // Add event listener to the button
+  const colorButton = document.getElementById('colorButton');
+  colorButton.addEventListener('click', toggleBackgroundColor);
+</script>
+</body>
+</html>
